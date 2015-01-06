@@ -1,4 +1,4 @@
-FROM franzabzieher/baseimage
+FROM phusion/baseimage
 MAINTAINER Franz Abzieher <franz@abzieher.net>
 
 RUN apt-get update && \
@@ -17,6 +17,3 @@ ADD apache2.sh /etc/service/apache2/run
 RUN crontab /root/crons.conf
 
 EXPOSE 80
-
-# Baseimage init process
-ENTRYPOINT ["/sbin/my_init"]
